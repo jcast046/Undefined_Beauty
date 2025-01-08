@@ -42,11 +42,11 @@ header {
 
 header .nav-container img {
   width: 200px;
-  margin-bottom: 10px;
   height: auto;
 }
 
-nav ul {
+/* Navigation links for desktop */
+.nav-links {
   list-style: none;
   font-size: 19px;
   padding: 0;
@@ -56,20 +56,68 @@ nav ul {
   gap: 25px;
 }
 
-nav ul li {
+.nav-links li {
   display: inline-block;
   font-weight: 700;
 }
 
-nav ul li a {
+.nav-links li a {
   color: #ffffff; /* White links */
   text-decoration: none;
   transition: color 0.3s;
 }
 
-nav ul li a:hover {
+.nav-links li a:hover {
   color: #f1c40f; /* Gold on hover */
-  transition: color 0.3s;
+}
+
+/* Hamburger menu styles for mobile */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #ffffff; /* White bars */
+  border-radius: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hamburger animation */
+.menu-toggle.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Mobile navigation menu */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  background: #2c3e50; /* Dark Slate */
+  width: 100%;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  padding: 10px 0;
+}
+
+.nav-links.open {
+  display: flex;
 }
 
 main {
@@ -90,31 +138,6 @@ section {
 section h2 {
   text-align: center;
   color: #1abc9c; /* Teal for section titles */
-}
-
-.card {
-  display: flex;
-  align-items: flex-start;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  padding: 15px;
-  box-sizing: border-box;
-  color: #2c3e50;
-}
-
-.card img {
-  width: 300px;
-  height: 300px;
-  border-radius: 8px;
-  object-fit: cover;
-  margin-right: 30px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.card .card-content h3 {
-  color: #1abc9c; /* Teal headings */
 }
 
 button {
@@ -145,23 +168,22 @@ footer a {
 
 footer a:hover {
   color: #f1c40f; /* Gold on hover */
-  transition: color 0.3s;
 }
 
 /* Responsive Design */
-@media (max-width: 970px) {
-  nav ul {
-      font-size: 15px;
-      gap: 15px;
+@media (max-width: 768px) {
+  .menu-toggle {
+      display: flex; /* Show hamburger menu on small screens */
   }
 
-  main {
-      margin-top: 120px;
-      padding: 10px;
+  .nav-links {
+      display: none; /* Hide nav links by default */
   }
-}
 
-@media (max-width: 480px) {
+  .nav-links.open {
+      display: flex; /* Show nav links when open */
+  }
+
   nav ul {
       flex-direction: column; /* Stack items vertically */
       align-items: center;
@@ -174,4 +196,20 @@ footer a:hover {
   section {
       padding: 15px;
   }
+
+  button {
+      width: 100%;
+      font-size: 1rem;
+  }
 }
+
+@media (max-width: 480px) {
+  h1, h2 {
+      font-size: 1.2rem; /* Reduce heading size */
+  }
+
+  nav ul li {
+      font-size: 0.9rem; /* Smaller nav links */
+  }
+}
+
