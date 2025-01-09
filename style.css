@@ -6,8 +6,8 @@ html {
 body {
   font-family: 'Arial', sans-serif;
   background: linear-gradient(
-      rgba(0, 0, 0, 0.7), 
-      rgba(0, 0, 0, 0.7)
+      rgba(106, 13, 173, 0.9), 
+      rgba(106, 13, 173, 0.9)
   ), 
   url('images/A1888A29-0C86-4579-8D63-5A3704A2717A.JPG');
   background-size: cover;
@@ -31,13 +31,13 @@ header {
   top: 0;
   width: 100%;
   z-index: 100;
-  background: #2c3e50; /* Dark Slate */
-  color: #ffffff; /* White text */
+  background: #6A0DAD; /* Royal Purple */
+  color: #FFFFFF; /* White text */
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
 }
 
 header .nav-container img {
@@ -54,8 +54,8 @@ header .nav-container img {
   display: flex;
   justify-content: center;
   gap: 25px;
-  background: none; /* Ensure no background for desktop */
-  position: static; /* Keep static on desktop */
+  background: none;
+  position: static;
 }
 
 .nav-links li {
@@ -64,13 +64,13 @@ header .nav-container img {
 }
 
 .nav-links li a {
-  color: #ffffff; /* White links */
+  color: #FFD700; /* Gold links */
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .nav-links li a:hover {
-  color: #f1c40f; /* Gold on hover */
+  color: #FFFFFF; /* White hover */
 }
 
 /* Hamburger menu styles for mobile */
@@ -87,7 +87,7 @@ header .nav-container img {
   display: block;
   height: 3px;
   width: 100%;
-  background: #ffffff; /* White bars */
+  background: #FFFFFF; /* White bars */
   border-radius: 2px;
   transition: all 0.3s ease-in-out;
 }
@@ -108,23 +108,23 @@ header .nav-container img {
 /* Mobile navigation menu */
 @media (max-width: 768px) {
   .menu-toggle {
-      display: flex; /* Show hamburger menu */
+    display: flex;
   }
 
   .nav-links {
-      display: none; /* Hide by default */
-      flex-direction: column;
-      align-items: center;
-      background: #2c3e50; /* Dark Slate background */
-      width: 100%;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      padding: 10px 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background: #6A0DAD; /* Royal Purple */
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 10px 0;
   }
 
   .nav-links.open {
-      display: flex; /* Show nav links when menu is toggled */
+    display: flex;
   }
 }
 
@@ -140,53 +140,53 @@ section {
   background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  color: #2c3e50; /* Dark Slate text for contrast */
+  color: #6A0DAD; /* Royal Purple text for contrast */
 }
 
 section h2 {
   text-align: center;
-  color: #1abc9c; /* Teal for section titles */
+  color: #FFD700; /* Gold for section titles */
 }
 
 button {
-  background-color: #1abc9c; /* Teal button */
-  color: #ffffff; /* White text */
-  border: none;
-  border-radius: 5px;
+  background-color: #6A0DAD; /* Royal Purple */
+  color: #FFFFFF; /* White text */
+  border: 2px solid #FFD700; /* Gold border */
+  border-radius: 8px;
   padding: 10px 20px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  font-size: 16px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 button:hover {
-  background-color: #f1c40f; /* Gold on hover */
+  background-color: #FFD700; /* Gold on hover */
+  color: #6A0DAD; /* Purple text */
 }
 
 footer {
   text-align: center;
   padding: 20px 0;
-  background: #2c3e50; /* Dark Slate */
-  color: #ffffff;
+  background: #6A0DAD; /* Royal Purple */
+  color: #FFFFFF;
 }
 
 footer a {
-  color: #1abc9c; /* Teal links */
+  color: #FFD700; /* Gold links */
   text-decoration: none;
 }
 
 footer a:hover {
-  color: #f1c40f; /* Gold on hover */
+  color: #FFFFFF; /* White on hover */
 }
 
 /* Small screen adjustments */
 @media (max-width: 480px) {
   h1, h2 {
-      font-size: 1.2rem; /* Reduce heading size */
+    font-size: 1.2rem;
   }
 
   nav ul li {
-      font-size: 0.9rem; /* Smaller nav links */
+    font-size: 0.9rem;
   }
 }
-
-
