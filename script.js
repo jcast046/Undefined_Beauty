@@ -1,11 +1,14 @@
+// Toggle menu open/close for mobile
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 
-// Toggle menu open/close
-menuToggle.addEventListener('click', () => {
-    menuToggle.classList.toggle('open');
-    navLinks.classList.toggle('open');
-});
+// Only apply toggle behavior if the menu toggle exists (mobile only)
+if (menuToggle && navLinks) {
+    menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('open');
+        navLinks.classList.toggle('open');
+    });
+}
 
 // Fade-out effect
 document.querySelectorAll('a').forEach(anchor => {

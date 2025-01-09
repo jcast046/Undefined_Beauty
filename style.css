@@ -54,6 +54,8 @@ header .nav-container img {
   display: flex;
   justify-content: center;
   gap: 25px;
+  background: none; /* Ensure no background for desktop */
+  position: static; /* Keep static on desktop */
 }
 
 .nav-links li {
@@ -104,20 +106,26 @@ header .nav-container img {
 }
 
 /* Mobile navigation menu */
-.nav-links {
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  background: #2c3e50; /* Dark Slate */
-  width: 100%;
-  position: absolute;
-  top: 60px;
-  left: 0;
-  padding: 10px 0;
-}
+@media (max-width: 768px) {
+  .menu-toggle {
+      display: flex; /* Show hamburger menu */
+  }
 
-.nav-links.open {
-  display: flex;
+  .nav-links {
+      display: none; /* Hide by default */
+      flex-direction: column;
+      align-items: center;
+      background: #2c3e50; /* Dark Slate background */
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      padding: 10px 0;
+  }
+
+  .nav-links.open {
+      display: flex; /* Show nav links when menu is toggled */
+  }
 }
 
 main {
@@ -170,39 +178,7 @@ footer a:hover {
   color: #f1c40f; /* Gold on hover */
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .menu-toggle {
-      display: flex; /* Show hamburger menu on small screens */
-  }
-
-  .nav-links {
-      display: none; /* Hide nav links by default */
-  }
-
-  .nav-links.open {
-      display: flex; /* Show nav links when open */
-  }
-
-  nav ul {
-      flex-direction: column; /* Stack items vertically */
-      align-items: center;
-  }
-
-  nav ul li {
-      margin: 10px 0;
-  }
-
-  section {
-      padding: 15px;
-  }
-
-  button {
-      width: 100%;
-      font-size: 1rem;
-  }
-}
-
+/* Small screen adjustments */
 @media (max-width: 480px) {
   h1, h2 {
       font-size: 1.2rem; /* Reduce heading size */
@@ -212,4 +188,5 @@ footer a:hover {
       font-size: 0.9rem; /* Smaller nav links */
   }
 }
+
 
