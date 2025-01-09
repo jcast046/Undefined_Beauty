@@ -19,7 +19,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  color: #ffffff; /* Default text color */
+  color: #FFFFFF; /* Default text color */
 }
 
 body.fade-out {
@@ -32,7 +32,7 @@ header {
   width: 100%;
   z-index: 100;
   background: #6A0DAD; /* Royal Purple */
-  color: #FFFFFF; /* White text */
+  color: #FFD700; /* Gold Text */
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
@@ -54,8 +54,6 @@ header .nav-container img {
   display: flex;
   justify-content: center;
   gap: 25px;
-  background: none;
-  position: static;
 }
 
 .nav-links li {
@@ -64,13 +62,13 @@ header .nav-container img {
 }
 
 .nav-links li a {
-  color: #FFD700; /* Gold links */
+  color: #FFD700; /* Gold Links */
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .nav-links li a:hover {
-  color: #FFFFFF; /* White hover */
+  color: #FFFFFF; /* White on Hover */
 }
 
 /* Hamburger menu styles for mobile */
@@ -87,7 +85,7 @@ header .nav-container img {
   display: block;
   height: 3px;
   width: 100%;
-  background: #FFFFFF; /* White bars */
+  background: #FFD700; /* Gold Bars */
   border-radius: 2px;
   transition: all 0.3s ease-in-out;
 }
@@ -137,21 +135,23 @@ main {
 section {
   margin: 20px;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+  background: rgba(255, 255, 255, 0.9); /* Semi-Transparent White */
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  color: #6A0DAD; /* Royal Purple text for contrast */
+  color: #6A0DAD; /* Royal Purple Text */
 }
 
 section h2 {
   text-align: center;
-  color: #FFD700; /* Gold for section titles */
+  color: #FFD700; /* Gold for Section Titles */
+  border-bottom: 2px solid #FFD700; /* Gold Underline */
+  padding-bottom: 10px;
 }
 
 button {
   background-color: #6A0DAD; /* Royal Purple */
-  color: #FFFFFF; /* White text */
-  border: 2px solid #FFD700; /* Gold border */
+  color: #FFD700; /* Gold Text */
+  border: 2px solid #FFD700; /* Gold Border */
   border-radius: 8px;
   padding: 10px 20px;
   cursor: pointer;
@@ -160,24 +160,24 @@ button {
 }
 
 button:hover {
-  background-color: #FFD700; /* Gold on hover */
-  color: #6A0DAD; /* Purple text */
+  background-color: #FFD700; /* Gold on Hover */
+  color: #6A0DAD; /* Purple Text */
 }
 
 footer {
   text-align: center;
   padding: 20px 0;
   background: #6A0DAD; /* Royal Purple */
-  color: #FFFFFF;
+  color: #FFD700; /* Gold Text */
 }
 
 footer a {
-  color: #FFD700; /* Gold links */
+  color: #FFD700; /* Gold Links */
   text-decoration: none;
 }
 
 footer a:hover {
-  color: #FFFFFF; /* White on hover */
+  color: #FFFFFF; /* White on Hover */
 }
 
 /* Small screen adjustments */
