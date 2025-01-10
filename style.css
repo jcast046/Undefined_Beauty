@@ -6,20 +6,15 @@ html {
 body {
   font-family: 'Arial', sans-serif;
   background: linear-gradient(
-      rgba(178, 102, 255, 0.8), /* Lavender gradient */
-      rgba(106, 13, 173, 0.9) /* Deep Royal Purple */
-  ),
-  url('images/A1888A29-0C86-4579-8D63-5A3704A2717A.JPG');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+      rgba(248, 241, 231, 0.8), /* Nude Beige */
+      rgba(255, 230, 230, 0.9) /* Soft Pink */
+  );
   margin: 0;
   animation: fadeIn 0.2s;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  color: #ffffff; /* Default white text */
+  color: #6a0dad; /* Royal Purple Text */
 }
 
 body.fade-out {
